@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <RelativeLayout
+        android:padding="@dimen/dp7"
+        android:id="@+id/rl_khoahoc_baihoc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:textStyle="bold"
+            android:textColor="#000000"
+            android:textSize="@dimen/dp20"
+            android:text="KHÓA HỌC VÀ BÀI HỌC"
+            android:id="@+id/tv_khoahoc_baihoc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+        </TextView>
+        <TextView
+            android:id="@+id/tv_xemthem"
+            android:layout_alignBottom="@id/tv_khoahoc_baihoc"
+            android:layout_alignParentRight="true"
+            android:textColor="#913677"
+            android:textSize="@dimen/dp18"
+            android:text="Xem Thêm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+        </TextView>
+    </RelativeLayout>
+    <HorizontalScrollView
+        android:scrollbars="none"
+        android:id="@+id/hs_khoahoc_baihoc"
+        android:layout_below="@id/rl_khoahoc_baihoc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </HorizontalScrollView>
+</RelativeLayout>

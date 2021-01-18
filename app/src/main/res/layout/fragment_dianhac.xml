@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_width="@dimen/dp350"
+        android:layout_height="@dimen/dp350"
+        android:layout_centerInParent="true"
+        android:src="@drawable/ic_launcher_background"
+        android:id="@+id/civ_dia"
+        app:civ_border_width="@dimen/dp2"
+        app:civ_border_color="#000000">
+    </de.hdodenhof.circleimageview.CircleImageView>
+</RelativeLayout>

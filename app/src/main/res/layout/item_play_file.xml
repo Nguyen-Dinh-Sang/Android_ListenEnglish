@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/dp10">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_play_index"
+            android:layout_margin="@dimen/dp10"
+            android:text="1"
+            android:textColor="#ffffff"
+            android:textSize="@dimen/dp17">
+        </TextView>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_play_tenfile"
+            android:layout_marginLeft="@dimen/dp10"
+            android:layout_toRightOf="@id/tv_play_index"
+            android:ellipsize="end"
+            android:maxWidth="@dimen/dp205"
+            android:singleLine="true"
+            android:text="test"
+            android:textColor="#ffffff"
+            android:textSize="@dimen/dp17">
+        </TextView>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_play_noidung"
+            android:layout_below="@id/tv_play_tenfile"
+            android:layout_marginLeft="@dimen/dp10"
+            android:layout_toRightOf="@id/tv_play_index"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="nội dung"
+            android:textColor="#ffffff"
+            android:textSize="@dimen/dp12">
+        </TextView>
+    </RelativeLayout>
+</RelativeLayout>

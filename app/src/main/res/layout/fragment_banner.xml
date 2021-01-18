@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <androidx.viewpager.widget.ViewPager
+            android:background="@color/colorAccent"
+            android:id="@+id/vp_banner"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp180">
+        </androidx.viewpager.widget.ViewPager>
+        <me.relex.circleindicator.CircleIndicator
+            android:id="@+id/cci_banner"
+            android:layout_marginTop="@dimen/dp10"
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dp13">
+        </me.relex.circleindicator.CircleIndicator>
+    </RelativeLayout>
+</ScrollView>

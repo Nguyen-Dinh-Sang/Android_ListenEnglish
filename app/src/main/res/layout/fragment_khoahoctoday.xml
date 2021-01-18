@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center">
+    <TextView
+        android:textColor="#3e3b3b"
+        android:textSize="@dimen/dp30"
+        android:gravity="center"
+        android:layout_marginTop="@dimen/dp15"
+        android:layout_marginBottom="@dimen/dp15"
+        android:id="@+id/iv_title_khoahoc"
+        android:text="Các Khóa Học"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </TextView>
+    <ListView
+        android:id="@+id/lv_khoahoc_today"
+        android:layout_below="@id/iv_title_khoahoc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </ListView>
+    <TextView
+        android:gravity="center"
+        android:textSize="@dimen/dp19"
+        android:text="Xem Thêm Các Khóa Học"
+        android:paddingTop="@dimen/dp10"
+        android:paddingBottom="@dimen/dp10"
+        android:layout_marginTop="@dimen/dp8"
+        android:layout_marginBottom="@dimen/dp8"
+        android:layout_below="@id/lv_khoahoc_today"
+        android:background="#c9c7c7"
+        android:textColor="#0a0a0a"
+        android:id="@+id/itv_xemthem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </TextView>
+</RelativeLayout>

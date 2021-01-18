@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:elevation="@dimen/dp5"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="@dimen/dp150"
+    android:layout_margin="@dimen/dp5">
+    <ImageView
+        android:scaleType="fitXY"
+        android:id="@+id/iv_tatca_khoahoc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </ImageView>
+    <View
+        android:background="@drawable/custom_background_banner"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </View>
+    <TextView
+        android:textColor="#ffffff"
+        android:ellipsize="end"
+        android:maxWidth="@dimen/dp200"
+        android:maxLines="2"
+        android:layout_marginLeft="@dimen/dp20"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/dp15"
+        android:id="@+id/tv_tieude"
+        android:textSize="@dimen/dp20"
+        android:text="tiêu đề"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+    </TextView>
+</RelativeLayout>

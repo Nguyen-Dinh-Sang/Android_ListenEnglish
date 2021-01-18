@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:layout_margin="@dimen/dp5"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <FrameLayout
+        android:id="@+id/fl_danhsach_khoahoc"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:scaleType="centerCrop"
+            android:id="@+id/iv_danhsach_khoahoc"
+            android:src="@drawable/ic_like"
+            android:layout_width="@dimen/dp180"
+            android:layout_height="@dimen/dp130">
+        </ImageView>
+    </FrameLayout>
+    <TextView
+        android:textSize="@dimen/dp15"
+        android:textColor="#060606"
+        android:text="Khóa Học"
+        android:gravity="left"
+        android:maxWidth="@dimen/dp200"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:id="@+id/tv_ten_khoahoc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+    </TextView>
+    <TextView
+        android:maxWidth="@dimen/dp200"
+        android:ellipsize="end"
+        android:id="@+id/tv_mota_khoahoc"
+        android:textSize="@dimen/dp13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+    </TextView>
+</LinearLayout>

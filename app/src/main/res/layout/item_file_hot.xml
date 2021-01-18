@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <ImageView
+        android:id="@+id/iv_file_yeuthich"
+        android:scaleType="fitXY"
+        android:layout_margin="@dimen/dp3"
+        android:layout_width="@dimen/dp80"
+        android:layout_height="@dimen/dp80">
+    </ImageView>
+    <TextView
+        android:textColor="#363636"
+        android:text="Tên bài hát"
+        android:textSize="@dimen/dp18"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:layout_toRightOf="@id/iv_file_yeuthich"
+        android:layout_marginTop="@dimen/dp7"
+        android:layout_marginLeft="@dimen/dp5"
+        android:id="@+id/tv_ten_file_yeuthich"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+    </TextView>
+    <TextView
+        android:ellipsize="end"
+        android:text="Mô tả"
+        android:textColor="#8c8a8a"
+        android:textSize="@dimen/dp13"
+        android:maxLines="1"
+        android:layout_toRightOf="@id/iv_file_yeuthich"
+        android:layout_marginTop="@dimen/dp7"
+        android:layout_marginLeft="@dimen/dp5"
+        android:layout_below="@id/tv_ten_file_yeuthich"
+        android:id="@+id/tv_mota_file_yeuthich"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+    </TextView>
+    <ImageView
+        android:src="@drawable/ic_notlike"
+        android:layout_marginRight="@dimen/dp10"
+        android:id="@+id/iv_luotthich"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:layout_width="@dimen/dp30"
+        android:layout_height="@dimen/dp30">
+    </ImageView>
+</RelativeLayout>

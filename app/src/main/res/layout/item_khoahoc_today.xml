@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <ImageView
+        android:layout_marginRight="@dimen/dp8"
+        android:layout_marginLeft="@dimen/dp8"
+        android:layout_marginTop="@dimen/dp5"
+        android:id="@+id/iv_background_khoahoc_today"
+        android:scaleType="fitXY"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp110">
+    </ImageView>
+    <View
+        android:background="@drawable/custom_background_banner"
+        android:layout_marginLeft="@dimen/dp8"
+        android:layout_marginRight="@dimen/dp8"
+        android:layout_marginTop="@dimen/dp5"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp110">
+    </View>
+    <ImageView
+        android:id="@+id/iv_khoahoc_today"
+        android:scaleType="fitXY"
+        android:layout_marginBottom="@dimen/dp10"
+        android:layout_marginLeft="@dimen/dp15"
+        android:layout_alignBottom="@id/iv_background_khoahoc_today"
+        android:elevation="@dimen/dp6"
+        android:layout_width="@dimen/dp50"
+        android:layout_height="@dimen/dp50">
+    </ImageView>
+    <TextView
+        android:text="Những Bai Hoc Hot"
+        android:layout_alignBottom="@id/iv_khoahoc_today"
+        android:layout_toRightOf="@id/iv_khoahoc_today"
+        android:textSize="@dimen/dp13"
+        android:layout_marginLeft="@dimen/dp13"
+        android:textStyle="bold"
+        android:textColor="#FFFFFF"
+        android:id="@+id/tv_ten_khoahoc"
+        android:maxLines="1"
+        android:layout_marginBottom="@dimen/dp5"
+        android:layout_marginRight="@dimen/dp50"
+        android:ellipsize="end"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+    </TextView>
+</RelativeLayout>
