@@ -1,7 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="#2196F3">
-
-</LinearLayout>
+    android:layout_height="match_parent">
+    <com.google.android.material.appbar.AppBarLayout
+        android:background="#3e3ee2"
+        android:id="@+id/abl_search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/tb_search"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize">
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_below="@id/abl_search"
+        android:id="@+id/rclv_search_results"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+    <TextView
+        android:visibility="gone"
+        android:textColor="#f20"
+        android:gravity="center"
+        android:text="Không có dữ liệu"
+        android:id="@+id/tv_no_data"
+        android:textSize="@dimen/dp35"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+</RelativeLayout>
