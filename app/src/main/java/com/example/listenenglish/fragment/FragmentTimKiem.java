@@ -20,12 +20,14 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.listenenglish.R;
+import com.example.listenenglish.adapter.SearchAdapter;
 
 public class FragmentTimKiem extends Fragment {
     View view;
     Toolbar toolbarSearch;
     RecyclerView recyclerViewSearchResults;
     TextView textViewNoData;
+    SearchAdapter searchAdapter;
 
     @Nullable
     @Override

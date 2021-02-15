@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <ImageView
+        android:layout_width="@dimen/dp80"
+        android:layout_height="@dimen/dp80"
+        android:id="@+id/iv_search_file"
+        android:layout_margin="@dimen/dp3"
+        android:scaleType="fitXY"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:id="@+id/tv_search_ten_fine"
+        android:maxWidth="@dimen/dp250"
+        android:layout_marginLeft="@dimen/dp5"
+        android:layout_marginTop="@dimen/dp7"
+        android:layout_toRightOf="@id/iv_search_file"
+        android:text="Tên file"
+        android:textColor="#000000"
+        android:textSize="@dimen/dp18"/>
+    <TextView
+        android:layout_below="@id/tv_search_ten_fine"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:id="@+id/tv_search_mota_fine"
+        android:maxWidth="@dimen/dp250"
+        android:layout_marginLeft="@dimen/dp5"
+        android:layout_marginTop="@dimen/dp7"
+        android:layout_toRightOf="@id/iv_search_file"
+        android:text="Mô tả"
+        android:textColor="#5E5E5E"
+        android:textSize="@dimen/dp18"/>
+    <ImageView
+        android:layout_width="@dimen/dp30"
+        android:layout_height="@dimen/dp30"
+        android:id="@+id/iv_search_luotthich"
+        android:src="@drawable/ic_notlike"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="@dimen/dp10"/>
+</RelativeLayout>
