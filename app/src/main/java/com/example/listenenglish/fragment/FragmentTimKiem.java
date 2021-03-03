@@ -9,6 +9,7 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -17,10 +18,21 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.SearchView;
 import androidx.appcompat.widget.Toolbar;
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.listenenglish.R;
 import com.example.listenenglish.adapter.SearchAdapter;
+import com.example.listenenglish.model.File;
+import com.example.listenenglish.service.APIService;
+import com.example.listenenglish.service.DataService;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 public class FragmentTimKiem extends Fragment {
     View view;
@@ -59,6 +71,7 @@ public class FragmentTimKiem extends Fragment {
             @Override
             public boolean onQueryTextSubmit(String query) {
                 Log.d("Sang OK: SearchView:", query);
+                searchKeyWord(query);
                 return true;
             }
 
@@ -68,5 +81,32 @@ public class FragmentTimKiem extends Fragment {
             }
         });
         super.onCreateOptionsMenu(menu, inflater);
+    }
+
+    private void searchKeyWord(String keyWord) {
+        DataService dataService = APIService.getService();
+        Call<List<File>> callBack = dataService.getSearch(keyWord);
+        callBack.enqueue(new Callback<List<File>>() {
+            @Override
+            public void onResponse(Call<List<File>> call, Response<List<File>> response) {
+                ArrayList<File> arrayListFile = (ArrayList<File>) response.body();
+                if (arrayListFile.size() > 0) {
+                    searchAdapter = new SearchAdapter(getActivity(), arrayListFile);
+                    LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getActivity());
+                    recyclerViewSearchResults.setLayoutManager(linearLayoutManager);
+                    recyclerViewSearchResults.setAdapter(searchAdapter);
+                    textViewNoData.setVisibility(View.GONE);
+                    recyclerViewSearchResults.setVisibility(View.VISIBLE);
+                } else {
+                    textViewNoData.setVisibility(View.VISIBLE);
+                    recyclerViewSearchResults.setVisibility(View.GONE);
+                }
+            }
+
+            @Override
+            public void onFailure(Call<List<File>> call, Throwable t) {
+
+            }
+        });
     }
 }
